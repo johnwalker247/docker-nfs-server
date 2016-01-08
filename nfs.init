@@ -3,7 +3,8 @@
 . /etc/default/nfs-kernel-server
 . /etc/default/nfs-common
 
-rpcbind
+service rpcbind start
+service statd start
 service nfs-kernel-server start
 
 exec inotifywait -m /exports
